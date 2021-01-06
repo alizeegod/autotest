@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import robot from 'robotjs';
 import icon from '../assets/icon.svg';
 
+import DrawLayer from './component/DrawLayer';
+
 let ysboard: any = null;
 const Hello = () => {
   const [screenImg, setScreenImg] = useState('');
@@ -50,6 +52,7 @@ const Hello = () => {
   }, []);
   return (
     <div className="auto-wrap">
+      <DrawLayer />
       <div className="control-bar" onClick={toggleShow}></div>
     </div>
   );
